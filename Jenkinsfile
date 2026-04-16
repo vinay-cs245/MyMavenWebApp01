@@ -6,11 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/vinay-cs245/MyMavenWebApp01'
-            }
-        }
 
         stage('Build') {
             steps {
@@ -26,7 +21,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'mvn clean package'
+                echo 'Deploy step goes here'
             }
         }
     }
